@@ -1,41 +1,41 @@
-generateSecurePassword = (n,ipt)=> {
-    const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*_+-=<>?";
+generarContraseñaSegura = (n,entrada)=> {
+    const caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*_+-=<>?";
     const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]/;
 
-    finding = true
+    encontrando = true
 
-    while (finding) {
-        let password = "";
-        if (ipt.value.length<1){
-            for (let i = 0; i < n - ipt.value.length; i++) {
-              password += characters.charAt(Math.floor(Math.random() * characters.length));
+    while (encontrando) {
+        let contraseña = "";
+        if (entrada.value.length<1){
+            for (let i = 0; i < n - entrada.value.length; i++) {
+              contraseña += caracteres.charAt(Math.floor(Math.random() * caracteres.length));
             }
         } else {
-            let word = ipt.value
-            newCH = word.toLowerCase() + word.toUpperCase() + "0123456789!@#$%^&*_+-=<>?"
+            let palabra = entrada.value
+            nuevoCaracter = palabra.toLowerCase() + palabra.toUpperCase() + "0123456789!@#$%^&*_+-=<>?"
             for (let i = 0; i < n; i++) {
-                password += newCH.charAt(Math.floor(Math.random() * newCH.length));
+                contraseña += nuevoCaracter.charAt(Math.floor(Math.random() * nuevoCaracter.length));
             }
         }
         try {
-            const isValid = regex.test(password);
-            console.log(isValid)
-            if (isValid) {finding = false; return password}
+            const esValido = regex.test(contraseña);
+            console.log(esValido)
+            if (esValido) {encontrando = false; return contraseña}
         }
         catch (e){
-            return "It takes a long time to generate, add some more characters and try again."
+            return "Toma mucho tiempo generarla. Agrega algunos caracteres más e intenta nuevamente."
         }      
     }
 }
 
 showPassword = n => {
-    document.getElementById("password").classList.remove('success')
+    document.getElementById("contraseña").classList.remove('success')
     const input = document.getElementById("frase")
-    document.getElementById("password").textContent = "Generating..."
+    document.getElementById("contraseña").textContent = "Generating..."
     setTimeout(() => {
-        let newPassword = generateSecurePassword(n,input)
-        document.getElementById("password").textContent = newPassword
-        document.getElementById("password").classList.add('success')
+        let newPassword = generarContraseñaSegura(n,input)
+        document.getElementById("contraseña").textContent = newPassword
+        document.getElementById("contraseña").classList.add('success')
     }, 500);
 }
 

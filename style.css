@@ -72,7 +72,7 @@ h3 {
     margin-bottom: 20px;
 }
 
-.result {   
+.resultado {   
     border: 2px solid #333;
     display: flex;
     background-color: #222;
@@ -87,7 +87,7 @@ h3 {
     color: #7e032c;
 }
 
-.me {
+.yo {
     display: flex;
     opacity: 0.3;
     position: absolute;
@@ -96,7 +96,7 @@ h3 {
     left: 2.5%;
     bottom: 1%;
 }
-.me p {
+.yo p {
     color: #06283D;
     font-size: 13px;
     font-weight: 700;
