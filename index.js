@@ -30,7 +30,7 @@ generateSecurePassword = (n,ipt)=> {
 
 showPassword = n => {
     document.getElementById("password").classList.remove('success')
-    const input = document.getElementById("sentence")
+    const input = document.getElementById("frase")
     document.getElementById("password").textContent = "Generating..."
     setTimeout(() => {
         let newPassword = generateSecurePassword(n,input)
