@@ -29,13 +29,13 @@ generarContraseñaSegura = (n,entrada)=> {
 }
 
 showPassword = n => {
-    document.getElementById("contraseña").classList.remove('success')
-    const input = document.getElementById("frase")
-    document.getElementById("contraseña").textContent = "Generating..."
+    document.getElementById("contraseña").classList.remove('exito')
+    const entrada = document.getElementById("frase")
+    document.getElementById("contraseña").textContent = "Generando..."
     setTimeout(() => {
-        let newPassword = generarContraseñaSegura(n,input)
-        document.getElementById("contraseña").textContent = newPassword
-        document.getElementById("contraseña").classList.add('success')
+        let nuevaContraseña = generarContraseñaSegura(n,entrada)
+        document.getElementById("contraseña").textContent = nuevaContraseña
+        document.getElementById("contraseña").classList.add('exito')
     }, 500);
 }
 
