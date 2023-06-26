@@ -1,0 +1,104 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #222;
+    padding-top: 20px;
+    
+}
+
+body,div {
+    margin: auto;
+}
+
+body,button {
+    color: #ffffff;
+}
+
+h1 {
+    font-size: 1.45rem;
+    letter-spacing: 2px;
+    text-align: center;
+    background-color: #7e032c;
+    padding: 10px
+}
+
+.pass-data {
+    margin-top: 20px;
+}
+
+.pass-data div {
+    padding: 20px;
+    text-align: center;
+}
+
+
+input,button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 0;
+}
+
+input{
+    margin:14px;
+    background: #333;
+    color: #e4e4e4;
+}
+
+button {
+    margin:5px 10px;
+    background: #666;
+}
+
+button:hover {
+    background: #555;
+    cursor: pointer;
+}
+
+h3 {
+    margin: 8px;
+}
+
+.result-container {
+    display: flex;
+    flex: 1;
+    margin-bottom: 20px;
+}
+
+.result {   
+    border: 2px solid #333;
+    display: flex;
+    background-color: #222;
+    height: 100px;
+    width: 80vw;
+    align-self: flex-start;
+    margin-top: 20px;
+}
+
+.success {
+    font-size: 1.2rem;
+    color: #7e032c;
+}
+
+.me {
+    display: flex;
+    opacity: 0.3;
+    position: absolute;
+    background: #fff;
+    border-radius: 5px;
+    left: 2.5%;
+    bottom: 1%;
+}
+.me p {
+    color: #06283D;
+    font-size: 13px;
+    font-weight: 700;
+    margin: 7.5px 2.5px;
+}
